@@ -1,0 +1,15 @@
+{
+    "name": "canvas-whiteboard",
+    "description": "This is an example of multiuser canvas wired with sockets.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "~4.8.4",
+        "socket.io": "~1.0.6"
+    }
+}
