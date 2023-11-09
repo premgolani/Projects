@@ -1,6 +1,6 @@
+const express = require('express');
 global.globalThis = global;
 
-const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
@@ -39,20 +39,20 @@ async function loadInitialData() {
 
 loadInitialData();
 
-
 // Color palette
 const colors = [ "#CFF09E", "#A8DBA8", "#79BD9A", "#3B8686", "#0B486B" ];
 let colorIndex = 0;
+
 // Express Setup
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/canvas.html');
 });
 
 // Socket.io Setup
-io.sockets.on('connection', function (socket) {
-  // Assign a color to the user
+io.sockets.on('connection', async function (socket) {
+  // Load and send the initial state to the connected user
   socket.emit('setup', colors[colorIndex], imageData);
-  
+
   // Rotate to the next color for the next user
   colorIndex = (colorIndex + 1) % colors.length;
 
