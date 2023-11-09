@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>White Board</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+</head>
+<body>
+
+  <canvas class="whiteboard" ></canvas>
+
+  <div class="colors"><span>Colors</span>
+    <div class="color black"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+  </div>
+
+  <div class="pencil"><span>Pencil</span>
+  <i class="pencil-width fa fa-pencil fa-lg" aria-hidden="true" id="2"></i>
+  <i class="pencil-width fa fa-pencil fa-2x" aria-hidden="true" id="4"></i>
+  <i class="pencil-width fa fa-pencil fa-3x" aria-hidden="true" id="6"></i>
+  <i class="pencil-width fa fa-pencil fa-4x" aria-hidden="true" id="10"></i>
+  <div class="eraser">Clear</div>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
